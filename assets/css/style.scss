@@ -132,23 +132,77 @@ nav {
     .delivery {
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
         .card1 {
-            flex-basis: 100%;
+            border: 1px solid rgba(128, 128, 128, 0.349);
+            /*  box-shadow: 2px 1px 7px 2px rgba(0, 0, 0, 0.137); */
+            flex-basis: 77%;
             display: flex;
             align-items: center;
+            margin-bottom: -20px;
             img {
                 width: 230px;
+            }
+            .triangle {
+                z-index: -99;
+                width: 350px;
+                position: absolute;
+                transform: translate(-230px);
+            }
+            .card-txt-1 {
+                margin-left: 30px;
+                p {
+                    width: 90%;
+                    text-align: justify;
+                }
             }
         }
         .card2,
         .card3,
         .card4 {
-            width: 30%;
+            border: 1px solid rgba(128, 128, 128, 0.349);
+            /* box-shadow: 2px 1px 7px 2px rgba(0, 0, 0, 0.219); */
+            width: 20%;
+            margin: 50px;
             display: flex;
             flex-direction: column;
             img {
-                width: 230px;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                width: 90%;
+                text-align: justify;
+            }
+        }
+        .card-txt-2,
+        .card-txt-3,
+        .card-txt-4 {
+            display: flex;
+            justify-content: center;
+        }
+        .card2 {
+            .card-img-2 {
+                background: #2BD3F9;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .card3 {
+            .card-img-3 {
+                background: #F1D90D;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .card4 {
+            .card-img-4 {
+                background: #D6006C;
+                display: flex;
+                justify-content: center;
             }
         }
     }
