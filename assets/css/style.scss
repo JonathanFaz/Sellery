@@ -49,6 +49,10 @@ nav {
     top: 18% !important;
 }
 
+.contenedor-registro {
+    top: 15% !important;
+}
+
 .contenedor {
     font-family: 'Work Sans', sans-serif;
     position: absolute;
@@ -230,13 +234,13 @@ nav {
             justify-content: space-between;
             margin: 30px;
             .logo {
-                margin: 10px;
+                margin: 7px;
                 img {
                     width: 50%;
                 }
             }
             .contact-info {
-                margin: 10px;
+                margin: 7px;
                 h3 {
                     margin-top: 0;
                     margin-bottom: 10px;
@@ -247,7 +251,7 @@ nav {
                 }
             }
             .social-media {
-                margin: 10px;
+                margin: 7px;
                 h3 {
                     margin-top: 0;
                     margin-bottom: 10px;
@@ -261,23 +265,82 @@ nav {
             justify-content: space-between;
             p {
                 font-size: 14px;
-                margin: 0;
+                margin-top: -20px;
+                margin-bottom: 0;
             }
         }
     }
-    .form-inputs {
-        top: 10%;
-        position: absolute;
-        z-index: 95;
+    .formulario-contacto {
         display: flex;
-        width: 100%;
+        justify-content: space-evenly;
+        .form-inputs {
+            top: 10%;
+            //position: absolute;
+            z-index: 95;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            input {
+                width: 400px;
+                font-size: 15px;
+                font-family: 'Work Sans', sans-serif;
+                margin: 8px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.5);
+                outline: none;
+            }
+            button {
+                font-family: 'Work Sans', sans-serif;
+                width: 400px;
+                margin: 8px;
+                padding: 8px;
+                background: #FF8E3C;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: 600;
+                font-size: 15px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .background {
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: -73px;
+            .bg-image {
+                // transform: translateY(-60px);
+                // margin-left: 10%;
+                // opacity: 0.7;
+                width: 85%;
+                height: 85%;
+                background-image: url('../img/running.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .registro {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
+        h2 {
+            letter-spacing: 1.5px;
+        }
+        p {
+            text-align: center;
+        }
         input {
-            font-size: 15px;
+            width: 400px;
+            font-size: 13px;
             font-family: 'Work Sans', sans-serif;
-            width: 50%;
-            margin: 10px;
+            margin: 8px;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid rgba(128, 128, 128, 0.5);
@@ -285,35 +348,18 @@ nav {
         }
         button {
             font-family: 'Work Sans', sans-serif;
-            width: 50%;
-            margin: 10px;
+            width: 400px;
+            margin: 8px;
             padding: 8px;
             background: #FF8E3C;
             border: none;
             border-radius: 5px;
             color: white;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 13px;
             &:hover {
                 cursor: pointer;
             }
-        }
-    }
-    .background {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: -100px;
-        .bg-image {
-            transform: translateY(-60px);
-            margin-left: 10%;
-            opacity: 0.7;
-            width: 76%;
-            height: 76%;
-            background-image: url('../img/running.png');
-            background-size: contain;
-            background-repeat: no-repeat;
         }
     }
 }
