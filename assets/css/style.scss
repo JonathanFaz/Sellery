@@ -248,10 +248,12 @@ nav {
             }
         }
         .info {
+            color: rgba(0, 0, 0, 0.787);
             margin: 30px;
             display: flex;
             justify-content: space-between;
             p {
+                font-size: 14px;
                 margin: 0;
             }
         }
