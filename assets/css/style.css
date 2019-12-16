@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 nav {
@@ -58,6 +59,10 @@ nav .nav-links li a {
 nav .nav-links li a:hover {
   background: rgba(255, 141, 60, 0.185);
   cursor: pointer;
+}
+
+.contenedor-contacto {
+  top: 18% !important;
 }
 
 .contenedor {
@@ -297,6 +302,11 @@ nav .nav-links li a:hover {
           justify-content: center;
 }
 
+.contenedor .footer {
+  font-weight: 500;
+  width: 99vw;
+}
+
 .contenedor .footer .contacto {
   color: rgba(0, 0, 0, 0.787);
   border-top: 1px solid rgba(0, 0, 0, 0.219);
@@ -355,5 +365,77 @@ nav .nav-links li a:hover {
 .contenedor .footer .info p {
   font-size: 14px;
   margin: 0;
+}
+
+.contenedor .form-inputs {
+  top: 10%;
+  position: absolute;
+  z-index: 95;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .form-inputs input {
+  font-size: 15px;
+  font-family: 'Work Sans', sans-serif;
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  outline: none;
+}
+
+.contenedor .form-inputs button {
+  font-family: 'Work Sans', sans-serif;
+  width: 50%;
+  margin: 10px;
+  padding: 8px;
+  background: #FF8E3C;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.contenedor .form-inputs button:hover {
+  cursor: pointer;
+}
+
+.contenedor .background {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: -100px;
+}
+
+.contenedor .background .bg-image {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  margin-left: 10%;
+  opacity: 0.7;
+  width: 76%;
+  height: 76%;
+  background-image: url("../img/running.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
