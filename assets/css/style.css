@@ -49,6 +49,15 @@ nav .nav-links li a {
   color: #FF8E3C;
   margin: 20px;
   text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav .nav-links li a:hover {
+  background: rgba(255, 141, 60, 0.185);
+  cursor: pointer;
 }
 
 .contenedor {
@@ -286,5 +295,63 @@ nav .nav-links li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.contenedor .footer .contacto {
+  color: rgba(0, 0, 0, 0.787);
+  border-top: 1px solid rgba(0, 0, 0, 0.219);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px;
+}
+
+.contenedor .footer .contacto .logo {
+  margin: 10px;
+}
+
+.contenedor .footer .contacto .logo img {
+  width: 50%;
+}
+
+.contenedor .footer .contacto .contact-info {
+  margin: 10px;
+}
+
+.contenedor .footer .contacto .contact-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.contenedor .footer .contacto .contact-info p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.contenedor .footer .contacto .social-media {
+  margin: 10px;
+}
+
+.contenedor .footer .contacto .social-media h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.contenedor .footer .info {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contenedor .footer .info p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
