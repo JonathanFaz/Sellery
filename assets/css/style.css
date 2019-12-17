@@ -66,7 +66,7 @@ nav .nav-links li a:hover {
 }
 
 .contenedor-registro {
-  top: 15% !important;
+  top: 12% !important;
 }
 
 .contenedor {
@@ -306,9 +306,19 @@ nav .nav-links li a:hover {
           justify-content: center;
 }
 
+.contenedor .index-footer {
+  position: static !important;
+}
+
+.contenedor .index-footer .info p {
+  margin-bottom: 20px !important;
+}
+
 .contenedor .footer {
   font-weight: 500;
   width: 99vw;
+  bottom: 0;
+  position: absolute;
 }
 
 .contenedor .footer .contacto {
@@ -357,7 +367,9 @@ nav .nav-links li a:hover {
 
 .contenedor .footer .info {
   color: rgba(0, 0, 0, 0.787);
-  margin: 30px;
+  margin-bottom: 0;
+  margin-left: 30px;
+  margin-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,6 +391,8 @@ nav .nav-links li a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 80vh;
+  width: 100vw;
 }
 
 .contenedor .formulario-contacto .form-inputs {
@@ -387,7 +401,6 @@ nav .nav-links li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -452,6 +465,23 @@ nav .nav-links li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 86vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedor .registro .form-inputs {
+  top: 10%;
+  z-index: 95;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -459,7 +489,6 @@ nav .nav-links li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
 }
 
 .contenedor .registro h2 {
