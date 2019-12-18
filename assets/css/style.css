@@ -69,6 +69,10 @@ nav .nav-links li a:hover {
   top: 12% !important;
 }
 
+.contenedor-login {
+  top: 12% !important;
+}
+
 .contenedor {
   font-family: 'Work Sans', sans-serif;
   position: absolute;
@@ -525,5 +529,27 @@ nav .nav-links li a:hover {
 
 .contenedor .registro button:hover {
   cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.274);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FF8E3C;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f67b23;
 }
 /*# sourceMappingURL=style.css.map */
