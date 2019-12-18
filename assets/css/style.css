@@ -4,6 +4,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -105,7 +109,7 @@ nav .nav-links li a:hover {
 }
 
 .contenedor .intro .intro-text div {
-  top: 230px;
+  top: 14.5%;
   position: absolute;
   width: 2px;
   height: 30px;
@@ -544,12 +548,12 @@ nav .nav-links li a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FF8E3C;
+  background: rgba(0, 0, 0, 0.301);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #f67b23;
+  background: rgba(0, 0, 0, 0.411);
 }
 /*# sourceMappingURL=style.css.map */

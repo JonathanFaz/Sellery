@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/cca8aa3167.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <title>Sellery</title>
 </head>
 
@@ -16,8 +18,8 @@
             <a href="index.html"> <img width="130" src="./assets/img/logo-sellery.png" alt="" /></a>
         </div>
         <ul class="nav-links">
-            <li><a href="contacto.html" style="color: black">Contacto</a></li>
-            <li><a href="registro.html">Conviertete en proveedor</a></li>
+            <li><a href="#contacto" style="color: black">Contacto</a></li>
+            <li><a href="contacto.html">Conviertete en proveedor</a></li>
             <li><a href="login.html" style="color: black; border: 1px solid rgba(0, 0, 0, 0.267)">Inicia sesión</a></li>
         </ul>
         <!-- <div class="burger">
@@ -32,8 +34,7 @@
                 <h2>Empieza tu negocio desde casa teniendo acceso a los mayores fabricantes de México</h2>
                 <div></div>
                 <p>Unete a la app #1 de reventa en LATAM con mas de 2,000 revendedores quienes están ganando mas de $5,000 cada mes. </p>
-
-                <button class="start-now">Empieza ahora</button>
+                <a style="text-decoration: none; color: white;" href="registro.html"><button class="start-now">Empieza ahora</button></a>
             </div>
             <div class="intro-img">
                 <img width="100%" src="./assets/img/persons.png" alt="">
@@ -97,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer index-footer">
+        <div id="contacto" class="footer index-footer">
             <div class="contacto">
                 <div class="logo">
                     <img src="./assets/img/logo-sellery.png" alt="">
