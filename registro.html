@@ -37,11 +37,11 @@
             </div>
             <div class="formulario ">
                 <form class="form-inputs">
-                    <input v-model="name" placeholder="Nombre" type="text">
-                    <input v-model="email" placeholder="Correo electrónico" type="email">
-                    <input v-model="cellphone" placeholder="Celular" type="text">
-                    <input v-model="password" type="password" placeholder="Contraseña">
-                    <input v-model="cpassword" type="password" placeholder="Confirmar contraseña">
+                    <input v-model="registro.name" placeholder="Nombre" type="text">
+                    <input v-model="registro.email" placeholder="Correo electrónico" type="email">
+                    <input v-model="registro.cellphone" placeholder="Celular" type="text">
+                    <input v-model="registro.password" type="password" placeholder="Contraseña">
+                    <input v-model="registro.cpassword" type="password" placeholder="Confirmar contraseña">
 
                 </form>
                 <button @click="signUp">Crear cuenta</button>
@@ -77,31 +77,9 @@
             </div>
         </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase.js"></script>
+    <script src="main.js"></script>
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
-
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCnT6uoSdb-e15lWRI_pSky_SzqNTuHEZo",
-        authDomain: "sellery-92785.firebaseapp.com",
-        databaseURL: "https://sellery-92785.firebaseio.com",
-        projectId: "sellery-92785",
-        storageBucket: "sellery-92785.appspot.com",
-        messagingSenderId: "608603868199",
-        appId: "1:608603868199:web:261ab7403af0e4eac01202",
-        measurementId: "G-XTXW0HJRJ1"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
-<script type="module" src="main.js"></script>
 
 </html>

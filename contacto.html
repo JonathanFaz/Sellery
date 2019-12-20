@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <div class="overlay">
+        hola
+    </div>
     <nav>
         <div id="logo" class="logo">
             <a href="index.html"> <img width="130" src="./assets/img/logo-sellery.png" alt="" /></a>
@@ -30,7 +33,7 @@
     </nav>
     <div class="contenedor contenedor-contacto">
 
-        <div class="formulario-contacto">
+        <div id="app" class="formulario-contacto">
             <div class="background">
                 <div class="title">
                     <h2>Conviértete en proveedor y llega a mas clientes</h2>
@@ -38,14 +41,19 @@
                 <div class="bg-image"></div>
             </div>
             <div class="formulario">
-                <form class="form-inputs" action="">
-                    <input type="text" placeholder="Nombre" type="text">
-                    <input type="text" placeholder="Celular" type="text">
-                    <input type="email" placeholder="Correo electrónico" type="text">
-                    <input type="url" placeholder="Página Web" type="text">
-                    <input type="text" placeholder="Empresa" type="text">
-                    <button type="submit">Enviar</button>
+                <form id="submitForm" class="form-inputs">
+                    <input v-model="contacto.name" type="text" placeholder="Nombre">
+                    <input v-model="contacto.cellphone" type="text" placeholder="Celular">
+                    <input v-model="contacto.email" type="email" placeholder="Correo electrónico">
+                    <input v-model="contacto.website" type="url" placeholder="Página Web">
+                    <input v-model="contacto.company" type="text" placeholder="Empresa">
+                    <button @click="submitForm" type="submit">Enviar</button>
                 </form>
+            </div>
+            <div id="modal" class="modal">
+                <h2>¡Gracias por ponerte en contacto!</h2>
+                <h4>En breve uno de nuestros ejecutivos se comunicara contigo</h4>
+                <button id="aceptar">Aceptar</button>
             </div>
         </div>
 
@@ -78,6 +86,8 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
