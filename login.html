@@ -39,7 +39,7 @@
                 <form id="login" class="form-inputs" action="">
                     <input v-model="registro.email" type="email" placeholder="Correo electrónico">
                     <input v-model="registro.password" type="password" placeholder="Contraseña">
-                    <button @click="login" type="submit">Iniciar sesión</button>
+                    <button @click.prevent="login" type="submit">Iniciar sesión</button>
                 </form>
             </div>
         </div>

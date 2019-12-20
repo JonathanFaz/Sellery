@@ -45,8 +45,8 @@
                             alert(err.message);
                         });
                 },
-                login(e) {
-                    e.preventDefault();
+                login() {
+                    // e.preventDefault();
                     firebase
                         .auth()
                         .signInWithEmailAndPassword(this.registro.email, this.registro.password)
@@ -72,8 +72,8 @@
                         company: company,
                     })
                 },
-                submitForm(e) {
-                    e.preventDefault();
+                submitForm() {
+                    //e.preventDefault();
                     let name = this.contacto.name;
                     let cellphone = this.contacto.cellphone;
                     let email = this.contacto.email;

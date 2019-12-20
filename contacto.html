@@ -46,7 +46,7 @@
                     <input v-model="contacto.email" type="email" placeholder="Correo electrónico">
                     <input v-model="contacto.website" type="url" placeholder="Página Web">
                     <input v-model="contacto.company" type="text" placeholder="Empresa">
-                    <button @click="submitForm" type="submit">Enviar</button>
+                    <button @click.prevent="submitForm" type="submit">Enviar</button>
                 </form>
             </div>
             <div id="modal" class="modal">

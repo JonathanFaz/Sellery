@@ -42,9 +42,9 @@
                     <input v-model="registro.cellphone" placeholder="Celular" type="text">
                     <input v-model="registro.password" type="password" placeholder="Contraseña">
                     <input v-model="registro.cpassword" type="password" placeholder="Confirmar contraseña">
-
+                    <button @click.prevent="signUp">Crear cuenta</button>
                 </form>
-                <button @click="signUp">Crear cuenta</button>
+
             </div>
         </div>
 
