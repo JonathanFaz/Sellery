@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <div id="overlay" class="overlay">
+    </div>
     <nav>
         <div id="logo" class="logo">
             <a href="index.html"> <img width="130" src="./assets/img/logo-sellery.png" alt="" /></a>
@@ -29,7 +31,6 @@
         </div> -->
     </nav>
     <div id="app" class="contenedor contenedor-registro">
-
         <div class="registro">
             <div class="title">
                 <h2>Crea tu cuenta en <span style="color: #FF8E3C">Sellery</span></h2>
@@ -45,6 +46,11 @@
                     <button @click.prevent="signUp">Crear cuenta</button>
                 </form>
 
+            </div>
+            <div id="modal" class="modal">
+                <h2>{{tituloMensaje}}</h2>
+                <h4>{{mensaje}}</h4>
+                <button id="aceptar">Aceptar</button>
             </div>
         </div>
 
@@ -63,8 +69,6 @@
                     <h3>Redes</h3>
                     <a style="color: gray;" target="_blank" href="https://www.facebook.com/sellery.mx"><i class="fab fa-facebook-square fa-2x"></i></a>
                     <a style="color: gray;" target="_blank" href="https://www.instagram.com/sellery_mx/"><i class="fab fa-instagram fa-2x"></i></a>
-
-
                 </div>
             </div>
             <div class="info">

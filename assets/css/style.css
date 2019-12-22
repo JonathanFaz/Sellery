@@ -19,16 +19,17 @@ body .overlay {
   height: 100px;
   background: black;
   position: absolute;
-  z-index: 100;
+  z-index: 0;
   height: 100vh;
   width: 100vw;
-  opacity: 0.5;
-  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav {
   background: white;
-  z-index: 99;
+  z-index: 1;
   font-family: 'Work Sans', sans-serif;
   width: 100%;
   position: fixed;
@@ -481,47 +482,6 @@ nav .nav-links li a:hover {
   background-repeat: no-repeat;
 }
 
-.contenedor .formulario-contacto .modal {
-  background: white;
-  border-radius: 5px;
-  position: absolute;
-  padding: 30px;
-  z-index: 199;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  visibility: hidden;
-}
-
-.contenedor .formulario-contacto .modal h2,
-.contenedor .formulario-contacto .modal h4 {
-  text-align: center;
-}
-
-.contenedor .formulario-contacto .modal button {
-  padding: 10px;
-  width: 200px;
-  margin-top: 20px;
-  background: #FF8E3C;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-}
-
 .contenedor .registro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -535,6 +495,41 @@ nav .nav-links li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* .modal {
+            animation-name: example;
+            animation-duration: 10s; 
+            transform: scale(0, 0);
+            transition: 0.3s all ease;
+            background: white;
+            border-radius: 5px;
+            position: absolute;
+            padding: 30px;
+            z-index: 199;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 30%;
+            left: 35%;
+            visibility: hidden;
+            h2,
+            h4 {
+                text-align: center;
+            }
+            button {
+                padding: 10px;
+                width: 200px;
+                margin-top: 20px;
+                background: #FF8E3C;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                font-weight: 600;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        } */
 }
 
 .contenedor .registro .form-inputs {
@@ -608,5 +603,50 @@ nav .nav-links li a:hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.411);
+}
+
+.modal {
+  width: 400px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  padding: 20px;
+  z-index: 199;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+}
+
+.modal h2,
+.modal h4 {
+  text-align: center;
+}
+
+.modal button {
+  padding: 10px;
+  width: 100px !important;
+  margin-top: 20px;
+  background: #FF8E3C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

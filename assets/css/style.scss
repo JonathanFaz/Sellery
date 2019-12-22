@@ -16,17 +16,17 @@ body {
         height: 100px;
         background: black;
         position: absolute;
-        z-index: 100;
+        z-index: 0;
         height: 100vh;
         width: 100vw;
-        opacity: 0.5;
-        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
     }
 }
 
 nav {
     background: white;
-    z-index: 99;
+    z-index: 1;
     font-family: 'Work Sans', sans-serif;
     width: 100%;
     position: fixed;
@@ -358,7 +358,18 @@ nav {
                 background-repeat: no-repeat;
             }
         }
-        .modal {
+    }
+    .registro {
+        display: flex;
+        height: 86vh;
+        width: 100vw;
+        align-items: center;
+        flex-direction: column;
+        /* .modal {
+            animation-name: example;
+            animation-duration: 10s; 
+            transform: scale(0, 0);
+            transition: 0.3s all ease;
             background: white;
             border-radius: 5px;
             position: absolute;
@@ -368,8 +379,8 @@ nav {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            //top: 30%;
-            //left: 35%;
+            top: 30%;
+            left: 35%;
             visibility: hidden;
             h2,
             h4 {
@@ -388,14 +399,7 @@ nav {
                 font-size: 15px;
                 cursor: pointer;
             }
-        }
-    }
-    .registro {
-        display: flex;
-        height: 86vh;
-        width: 100vw;
-        align-items: center;
-        flex-direction: column;
+        } */
         .form-inputs {
             top: 10%;
             z-index: 95;
@@ -466,4 +470,39 @@ nav {
 
  ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.411);
+}
+
+.modal {
+    width: 400px;
+    transition: 0.3s all ease;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    padding: 20px;
+    z-index: 199;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //top: 30%;
+    //left: 35%;
+    //visibility: hidden;
+    transform: scale(0, 0);
+    h2,
+    h4 {
+        text-align: center;
+    }
+    button {
+        padding: 10px;
+        width: 100px !important;
+        margin-top: 20px;
+        background: #FF8E3C;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+    }
 }

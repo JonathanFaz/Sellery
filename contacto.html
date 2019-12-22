@@ -49,9 +49,9 @@
                     <button @click.prevent="submitForm" type="submit">Enviar</button>
                 </form>
             </div>
-            <div id="modal" class="modal">
-                <h2>¡Hemos recibido tu informacion!</h2>
-                <h4>En breve uno de nuestros ejecutivos se comunicará contigo</h4>
+            <div id="modal" class="modal modalAnimation">
+                <h2>{{tituloMensaje}}</h2>
+                <h4>{{mensaje}}</h4>
                 <button id="aceptar">Aceptar</button>
             </div>
         </div>

@@ -12,7 +12,8 @@
 </head>
 
 <body>
-
+    <div id="overlay" class="overlay">
+    </div>
     <nav>
         <div id="logo" class="logo">
             <a href="index.html"> <img width="130" src="./assets/img/logo-sellery.png" alt="" /></a>
@@ -35,12 +36,17 @@
                 <h2 style="text-align: center;">Inicia sesión</h2>
                 <p>¿No tienes cuenta? <a href="registro.html">Crea una ahora</a></p>
             </div>
-            <div class="formulario ">
+            <div class="formulario">
                 <form id="login" class="form-inputs" action="">
                     <input v-model="registro.email" type="email" placeholder="Correo electrónico">
                     <input v-model="registro.password" type="password" placeholder="Contraseña">
                     <button @click.prevent="login" type="submit">Iniciar sesión</button>
                 </form>
+            </div>
+            <div id="modal" class="modal">
+                <h2>{{tituloMensaje}}</h2>
+                <h4>{{mensaje}}</h4>
+                <button id="aceptar">Aceptar</button>
             </div>
         </div>
 

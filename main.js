@@ -17,95 +17,117 @@
 
 
     var vm = new Vue({
-            el: "#app",
-            data: {
-                registro: {
-                    name: "",
-                    email: "",
-                    cellphone: "",
-                    password: "",
-                    cpassword: ""
-                },
-                contacto: {
-                    name: "",
-                    cellphone: "",
-                    email: "",
-                    website: "",
-                    company: "",
-                }
-
+        el: "#app",
+        data: {
+            registro: {
+                name: "",
+                email: "",
+                cellphone: "",
+                password: "",
+                cpassword: ""
             },
-            methods: {
-                signUp() {
-                    const auth = firebase.auth();
-                    if (this.registro.email === "" || this.registro.password === "") {
-                        alert("Por favor llena todos los campos")
-                    } else {
-                        auth.createUserWithEmailAndPassword(this.registro.email, this.registro.password).then(user => {
-                                alert('Cuenta creada con éxito');
+            contacto: {
+                name: "",
+                cellphone: "",
+                email: "",
+                website: "",
+                company: "",
+            },
+            mensaje: "¡Por favor llena todos los campos!",
+            tituloMensaje: ""
+                /* mensajeContacto: "En breve uno de nuestros ejecutivos se comunicará contigo",
+                mensajeRegistro: "¡Registro exitoso!" */
+
+        },
+        methods: {
+            signUp() {
+                const auth = firebase.auth();
+                if (this.registro.email === "" || this.registro.password === "") {
+                    this.tituloMensaje = "";
+                    this.mensaje = "¡Por favor llena todos los campos!"
+                    this.showModal();
+                } else {
+                    auth.createUserWithEmailAndPassword(this.registro.email, this.registro.password).then(user => {
+                            this.tituloMensaje = "";
+                            this.mensaje = "¡Registro exitoso!"
+                            this.showModal();
+                        },
+                        err => {
+                            this.mensaje = err.message;
+                            this.showModal();
+                        });
+                }
+            },
+            login() {
+                if (this.registro.email === "" || this.registro.password === "") {
+                    this.tituloMensaje = "";
+                    this.mensaje = "¡Por favor llena todos los campos!"
+                    this.showModal();
+
+
+                } else {
+                    firebase
+                        .auth()
+                        .signInWithEmailAndPassword(this.registro.email, this.registro.password)
+                        .then(
+                            user => {
+                                alert("Welcome");
+
                             },
                             err => {
                                 alert(err.message);
-                            });
-                    }
-                },
-                login() {
-                    if (this.registro.email === "" || this.registro.password === "") {
-                        alert("Por favor llena todos los campos")
-                    } else {
-                        firebase
-                            .auth()
-                            .signInWithEmailAndPassword(this.registro.email, this.registro.password)
-                            .then(
-                                user => {
-                                    alert("Welcome");
-                                    //this.$router.push("/");
-                                },
-                                err => {
-                                    alert(err.message);
-                                }
-                            );
-                    }
+                            }
+                        );
+                }
 
-                },
+            },
 
-                saveMessage(name, cellphone, email, website, company) {
-                    let newMessageRef = mensajeFormulario.push();
-                    newMessageRef.set({
-                        name: name,
-                        cellphone: cellphone,
-                        email: email,
-                        website: website,
-                        company: company,
-                    })
-                },
-                submitForm() {
-                    let name = this.contacto.name;
-                    let cellphone = this.contacto.cellphone;
-                    let email = this.contacto.email;
-                    let website = this.contacto.website;
-                    let company = this.contacto.company;
-                    if (name === "" || cellphone === "" || email === "" || website === "" || company === "") {
-                        alert("Por favor llena todos los campos");
-                    } else {
-                        this.saveMessage(name, cellphone, email, website, company);
-                        document.getElementById("modal").style.visibility = "visible";
-                        document.getElementById("overlay").style.visibility = "visible";
-                        let aceptar = document.getElementById("aceptar").addEventListener('click', function() {
-                            document.getElementById("modal").style.visibility = "hidden";
-                            document.getElementById("overlay").style.visibility = "hidden";
-                        });
-                        this.contacto.name = "";
-                        this.contacto.cellphone = "";
-                        this.contacto.email = "";
-                        this.contacto.website = "";
-                        this.contacto.company = "";
-                    }
+            saveMessage(name, cellphone, email, website, company) {
+                let newMessageRef = mensajeFormulario.push();
+                newMessageRef.set({
+                    name: name,
+                    cellphone: cellphone,
+                    email: email,
+                    website: website,
+                    company: company,
+                })
+            },
+            submitForm() {
+                let name = this.contacto.name;
+                let cellphone = this.contacto.cellphone;
+                let email = this.contacto.email;
+                let website = this.contacto.website;
+                let company = this.contacto.company;
+                if (name === "" || cellphone === "" || email === "" || website === "" || company === "") {
+                    this.tituloMensaje = "";
+                    this.mensaje = "¡Por favor llena todos los campos!"
+                    this.showModal();
+                } else {
+                    this.saveMessage(name, cellphone, email, website, company);
+                    this.tituloMensaje = "¡Hemos recibido tu informacion!"
+                    this.mensaje = "En breve uno de nuestros ejecutivos se comunicará contigo"
+                    this.showModal();
+                    this.contacto.name = "";
+                    this.contacto.cellphone = "";
+                    this.contacto.email = "";
+                    this.contacto.website = "";
+                    this.contacto.company = "";
+                }
 
-                },
+            },
+            showModal() {
+                document.getElementById("modal").style.transform = "scale(1,1)";
+                document.getElementById("overlay").style.opacity = "0.5";
+                document.getElementById("overlay").style.zIndex = "100";
+                let aceptar = document.getElementById("aceptar").addEventListener('click', function() {
+
+                    document.getElementById("modal").style.transform = "scale(0,0)";
+                    document.getElementById("overlay").style.opacity = "0";
+                    document.getElementById("overlay").style.zIndex = "0";
+                });
 
             }
-        })
-        //document.getElementById("submitForm").addEventListener('submit', vm.submitForm);
-        //document.getElementById("login").addEventListener('submit', vm.login);
+
+        }
+    })
 }())
